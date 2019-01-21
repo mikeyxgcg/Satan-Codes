@@ -2758,5 +2758,19 @@ ${thisMessage}\`\`\`
 
     })}});
 
+client.on('message', message => {
+    if(message.content.startsWith( "#" + "JavaScript")) {
+      var thatRole = message.guild.roles.find('name', 'JavaScript');
+      if(message.member.roles.has(thatRole)) return;
+      if(message.content.split(' ')[0] !== "#" + "JavaScript") return;
+        message.member.addRole(thatRole).catch(e => errors++);
+      const embed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .setDescription('**✅ Added Role JavaScript** ')
+      .setFooter(`• Requested By: ${message.author.tag}`);
+    message.channel.sendEmbed(embed);
+     }
+  });
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
