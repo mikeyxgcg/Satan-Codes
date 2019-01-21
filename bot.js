@@ -2734,18 +2734,18 @@ ${thisMessage}\`\`\`
     })}});
 
 client.on('message', message => {
-    if(message.content.startsWith( "#" + "JavaScript")) {
-      var thatRole = message.guild.roles.find('name', 'JavaScript');
-      if(message.member.roles.has(thatRole)) return;
-      if(message.content.split(' ')[0] !== "#" + "JavaScript") return;
-        message.member.addRole(thatRole).catch(e => errors++);
-      const embed = new Discord.RichEmbed()
-    .setColor("RANDOM")
-    .setDescription('**✅ Added Role JavaScript** ')
-      .setFooter(`• Requested By: ${message.author.tag}`);
-    message.channel.sendEmbed(embed);
-     }
-  });
+  var thatRole = message.guild.roles.find('name', 'JavaScript');
+  if(message.content.startsWith( "#" + "JavaScript")) {
+    if(message.member.roles.has(thatRole)) return;
+    if(message.content.split(' ')[0] !== prefix + "JavaScript") return;
+      message.member.addRole(thatRole).catch(e => errors++);
+    const embed = new Discord.RichEmbed()
+  .setColor("RANDOM")
+  .setDescription('**:white_check_mark: Added Role** ')
+    .setFooter(`• Requested By: ${message.author.tag}`);
+  message.channel.sendEmbed(embed);
+ }
+});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
