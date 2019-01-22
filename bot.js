@@ -1570,9 +1570,9 @@ client.on('message',async message => {
 
 if(!message.channel.guild) return message.reply(' ');
 
-  let rank = message.guild.member(message.author).roles.find('name', '• SatanMC » Support', '• Toxic » Support Plus');
+  let rank = message.guild.member(message.author).roles.find('name', 'Js Owners', '• Toxic » Support Plus');
 
-  if (!rank) return message.channel.send('🛑 **| يجب ان تمتلك رتبة [• SatanMC » Support] لأستخدام هذا الأمر.**');
+  if (!rank) return message.channel.send('🛑 **| يجب ان تمتلك رتبة [Js Owners] لأستخدام هذا الأمر.**');
 
   let jscodes = message.guild.channels.find(`name`, "✽-discord-js");
 
@@ -1718,9 +1718,9 @@ client.on('message',async message => {
 
 if(!message.channel.guild) return message.reply(' ');
 
-  let rank = message.guild.member(message.author).roles.find('name', '• SatanMC » Support', '• SatanMC » Support Plus');
+  let rank = message.guild.member(message.author).roles.find('name', 'Js Owners', '• SatanMC » Support Plus');
 
-  if (!rank) return message.channel.send('🛑 **| يجب ان تمتلك رتبة [• SatanMC » Support] لأستخدام هذا الأمر.**');
+  if (!rank) return message.channel.send('🛑 **| يجب ان تمتلك رتبة [Js Owners] لأستخدام هذا الأمر.**');
 
   let jscodes = message.guild.channels.find(`name`, "✽-discord-html");
 
